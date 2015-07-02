@@ -1,0 +1,4 @@
+ErrorDocument 403 http://www.nuptsefoundation.org/
+Order deny,allow
+Deny from all
+Allow from 198.46.139.236

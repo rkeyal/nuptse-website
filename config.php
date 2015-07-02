@@ -1,0 +1,3 @@
+<?php
+$MAX_ANSWER_ATTEMPTS = 2;
+?>
