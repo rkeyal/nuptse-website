@@ -6,7 +6,10 @@
     <div class="container">
     <div class="container-fluid">
       <div class="row-fluid">
-    <?php include("resources.php"); ?>
+	<?php
+		if (isset($_COOKIE["fname"]))
+			include("resources.php");
+	?>
 	<div class="span9">
 	  <div class="hero-unit">
             <h1>Welcome</h1>
