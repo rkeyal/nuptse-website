@@ -34,6 +34,12 @@
 					</div>
 				</div>
 				<div class="control-group">
+					<label class="control-label" for="input01">School</label>
+					<div class="controls">
+						<input type="text" class="input-xlarge" id="user_school" name="user_school">
+					</div>	
+				</div>
+				<div class="control-group">
 					<label class="control-label" for="input01">Phone Number</label>
 					<div class="controls">
 						<input type="text" class="input-xlarge" id="user_phone" name="user_phone">
@@ -71,7 +77,7 @@
 					  </div>
 				</div>
                 <?php
-                if (empty($_GET['email'])) {
+                if (isset($_GET['email']) and $_GET['email']=="false") {
                     echo '
                         <div class="alert alert-error">
                             <button type="button" class="close" data-dismiss="alert">&times;</button>
