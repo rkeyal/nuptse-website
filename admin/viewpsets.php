@@ -55,7 +55,7 @@
                 $users = array_merge($keys, $users);
             }
             $users = array_unique($users);
-            error_log(explode(", ", $users),3, "/var/www/html/errors.log");
+            error_log(implode(", ", $users),3, "../errors.log");
             echo "<div class='tab-pane' id='" . $column[$i] . "'>
             <h1>" . $names[$i] . "</h1>
             <h4>" . $uploaders[$i] . "</h4>
@@ -107,7 +107,7 @@
     </div> <!-- /container-fluid -->
     </div> <!--/container-->
     <div class="container">
-    <?php include ("footer.php"); ?>
+    <?php include ("../footer.php"); ?>
     </div>
 
     <!-- Le javascript
