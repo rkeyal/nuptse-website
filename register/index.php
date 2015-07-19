@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-	<?php include("/var/www/html/header.php"); ?>
+	<?php include("../header.php"); ?>
 <body>
-	<?php include("/var/www/html/navbar/navbar.php"); ?>
+	<?php include("../navbar/navbar.php"); ?>
 	<div class="container">
 		<div class="row">
 			<div class="span8">
@@ -31,12 +31,6 @@
                             }
                         ?>
                         </select>
-					</div>
-				</div>
-				<div class="control-group">
-					<label class="control-label" for="input01">School</label>
-					<div class="controls">
-						<input type="text" class="input-xlarge" id="user_school" name="user_school">
 					</div>
 				</div>
 				<div class="control-group">
@@ -77,7 +71,7 @@
 					  </div>
 				</div>
                 <?php
-                if ($_GET['email'] === "false") {
+                if (empty($_GET['email'])) {
                     echo '
                         <div class="alert alert-error">
                             <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -90,7 +84,7 @@
 			</div>
 		</div>
 
-			<?php include("/var/www/html/footer.php"); ?>
+			<?php include("../footer.php"); ?>
 			  </div><!--/row-->
 
     <!-- Le javascript
