@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-	<?php include("/var/www/html/header.php"); ?>
+	<?php include("./header.php"); ?>
 <body>
-	<?php include("/var/www/html/navbar/navbar.php"); ?>
+	<?php include("./navbar/navbar.php"); ?>
 	<div class="container">
 <?php if ($_GET["pending"] == "True"){
     echo '<h1>Account Pending</h1>
@@ -12,8 +12,8 @@
         <p>Incorrect email or password, please contact <a href="mailto:aseem.keyal@gmail.com">aseem.keyal@gmail.com</a> if trying to log in again does not work.</p>';
 }
 ?>
-        <?php include("/var/www/html/login.php"); ?>
-    <?php include("/var/www/html/footer.php"); ?>
+        <?php include("./login.php"); ?>
+    <?php include("./footer.php"); ?>
     </div><!--/row-->
 
     <!-- Le javascript
