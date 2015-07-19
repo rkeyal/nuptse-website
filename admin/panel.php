@@ -9,14 +9,14 @@
     <a href="/admin/manageusers.php">Manage Users/Groups</a><br />
     <a href="/admin/viewpsets.php">View Problem Sets</a><br />
     <a href="/admin/addpset.php">Add Problem Set</a>
-    <?php if ($_GET['groups'] === "true") {
+    <?php if (!empty($_GET['groups']) and $_GET['groups'] === "true") {
         echo '
             <div class="alert alert-success">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 <strong>Success!</strong> Groups modified successfully.
             </div>';
     }
-    if ($_GET['changed'] === "true") {
+    if (!empty($_GET['groups']) and $_GET['changed'] === "true") {
         echo '
             <div class="alert alert-success">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
