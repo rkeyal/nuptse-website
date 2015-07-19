@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-	<?php include("/var/www/html/header.php"); ?>
+	<?php include("../header.php"); ?>
 <body>
-	<?php include("/var/www/html/navbar/navbar.php"); ?>
+	<?php include("../navbar/navbar.php"); ?>
 	<div class="container">
         <h1>Registration Complete!</h1>
         <p>Log in to your account or return to the home page <a href="../index.php">here</a>.</p>
-        <?php include("/var/www/html/login.php"); ?>
-    <?php include("/var/www/html/footer.php"); ?>
+        <?php include("../login.php"); ?>
+    <?php include("../footer.php"); ?>
     </div><!--/row-->
 
     <!-- Le javascript
