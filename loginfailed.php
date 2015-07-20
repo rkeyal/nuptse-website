@@ -4,7 +4,7 @@
 <body>
 	<?php include("./navbar/navbar.php"); ?>
 	<div class="container">
-<?php if ($_GET["pending"] == "True"){
+<?php if (!empty($_GET['pending']) and $_GET["pending"] == "True"){
     echo '<h1>Account Pending</h1>
         <p>Your account is currently pending approval, if you have any questions please contact <a href="mailto:aseem.keyal@gmail.com">aseem.keyal@gmail.com</a>.</p>';
 } else {
