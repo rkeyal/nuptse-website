@@ -37,14 +37,14 @@
 	  <?php include("setpassword.php"); ?>
 	  </div>
 	</div> <!--/tab content-->
-    <?php if ($_GET['groups'] === "true") {
+    <?php if (!empty($_GET['groups']) and $_GET['groups'] === "true") {
         echo '
             <div class="alert alert-success">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 <strong>Success!</strong> Groups modified successfully.
             </div>';
     }
-   if ($_GET['groups'] === "false") {
+   if (!empty($_GET['groups']) and $_GET['groups'] === "false") {
         echo '
             <div class="alert alert-failure">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -57,7 +57,7 @@
     </div> <!-- /container-fluid -->
     </div> <!--/container-->
     <div class="container">
-    <?php include ("footer.php"); ?>
+    <?php include ("../footer.php"); ?>
     </div>
 
     <!-- Le javascript

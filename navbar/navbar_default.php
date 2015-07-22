@@ -55,7 +55,7 @@
               <li class="dropdown">
                <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon-user icon-white"></i> Sign In <strong class="caret"></strong></a>
               <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;"> ';
-            include("../admin/login.php");
+            include("admin/login.php");
             echo '
            </div>
             </li>

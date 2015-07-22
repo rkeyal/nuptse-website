@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-	<?php include("/var/www/html/header.php"); ?>
+	<?php include("../header.php"); ?>
 <body>
-	<?php include("/var/www/html/navbar/navbar.php"); ?>
+	<?php include("../navbar/navbar.php"); ?>
 	<div class="container">
         <h1>Login Failed</h1>
-        <p>Try logging in again or return to the home page <a href="../index.php">here</a>.</p>
-        <?php include("/var/www/html/admin/login.php"); ?>
-        <p>If you have forgot your password, please contact <a href="mailto:aseem.keyal@gmail.com">aseem.keyal@gmail.com</a>.</p>
-    <?php include("/var/www/html/footer.php"); ?>
+        <p>Try logging in again or returning to the home page <a href="../index.php">here</a>.</p>
+        <?php include("../admin/login.php"); ?>
+        <p>If you have forgotten your password, please contact <a href="mailto:aseem.keyal@gmail.com">aseem.keyal@gmail.com</a>.</p>
+    <?php include("../footer.php"); ?>
     </div><!--/row-->
 
     <!-- Le javascript
