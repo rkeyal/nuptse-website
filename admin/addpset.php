@@ -1,5 +1,5 @@
 <?php
-   include("checkauth.php");
+   include("./checkauth.php");
    ?>
 <html>
     <?php include("../header.php"); ?>

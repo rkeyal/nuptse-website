@@ -16,13 +16,22 @@
               <li class="dropdown">
                <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon-question-sign icon-white"></i> About</a>
                 <ul class="dropdown-menu">
-                    <li><a href="/about/Nuptse%20Foundation%20Overview%20Rev%20D3.pdf">About Nuptse</a></li>
+                    <li><a href="/about/Nuptse%20Foundation%20Overview%20Rev%20D3.pdf">Foundation Overview</a></li>
+					<li><a href="/about/Nuptse%20Foundation%20Overview%20Rev%20D3.pdf">Class Structure</a></li>
                     <li><a href="/about/2015-16%20Class%20Information%20Rev%20D.pdf">Class Schedule</a></li>
-                    <li><a href="#">Staff</a></li>
-                    <li><a href="#">Nuptse Board</a></li>
-                    <li><a href="../contactus.php">Contact Us</a></li>
+                    <!--<li><a href="#">Student Staff</a></li>
+                    <li><a href="#">Board Members</a></li>
+                    <li><a href="../contactus.php">Contact Us</a></li>-->
                 </ul>
                 </li>
+			<li class="dropdown">
+               <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon-book icon-white"></i> Classes</a>
+                <ul class="dropdown-menu">	
+					<li><a href="/classes/classdescriptions.php">Class Descriptions</a></li>
+					<li><a href="/classes/registration.php">Registration</a></li>
+				</ul>
+			</li>
+			<li><a href="/contactus.php"><i class="icon-envelope icon-white"></i> Contact Us</a></li>
            </ul>
 	    <ul class="nav pull-right">
         <?php if ($page != '/admin/') {
