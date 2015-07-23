@@ -4,13 +4,12 @@
   <body>
     <?php include("../navbar/navbar.php"); ?>
     <div class="container" >
-    <h1>Enrollment Form</h1>
-	<object data="EnrollmentFormFinal.pdf" type="application/pdf" width="100%" height="800px">
-                       <p>Looks like you can't view <a href="EnrollmentFormFinal.pdf">this file.</a></p>
-                    </object>
-      <?php include("../footer.php"); ?>
-
+		<h1>Enrollment Form</h1>
+		<object data="EnrollmentFormFinal.pdf" type="application/pdf" width="100%" height="800px">
+            <p>Looks like you can't view <a href="EnrollmentFormFinal.pdf">this file.</a></p>
+        </object>
     </div> <!-- /container -->
+	<?php include("../footer.php"); ?>
     </div>
     <!-- Le javascript
     ================================================== -->
