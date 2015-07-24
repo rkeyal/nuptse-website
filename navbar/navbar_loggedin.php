@@ -14,15 +14,20 @@
 	   	?>
               <li <?php if ($page == '/index.php' or $page == NULL){ echo 'class="active"'; } ?>><a href="/index.php"><i class="icon-home icon-white"></i> Home</a></li>
               <li class="dropdown">
-               <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon-question-sign icon-white"></i> About</a>
+               <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon-align-left icon-white"></i> About</a>
                 <ul class="dropdown-menu">
-                    <li><a href="/about/Nuptse%20Foundation%20Overview%20Rev%20D3.pdf">About Nuptse</a></li>
-                    <li><a href="/about/2015-16%20Class%20Information%20Rev%20D.pdf">Class Schedule</a></li>
-                    <li><a href="#">Staff</a></li>
-                    <li><a href="#">Nuptse Board</a></li>
-                    <li><a href="../contactus.php">Contact Us</a></li>
+                    <!--<li><a href="/about/Nuptse%20Foundation%20Overview%20Rev%20D3.pdf">Foundation Overview</a></li>
+					<li><a href="/about/Nuptse%20Foundation%20Overview%20Rev%20D3.pdf">Class Structure</a></li>-->
+					<li><a href="/about/foundationoverview.php">Foundation Overview</a></li>
+                    <!--<li><a href="/about/2015-16%20Class%20Information%20Rev%20D.pdf">Class Schedule</a></li>-->
+                    <!--<li><a href="#">Student Staff</a></li>
+                    <li><a href="#">Board Members</a></li>-->
                 </ul>
                 </li>
+				
+			<li><a href="/contactus.php"><i class="icon-envelope icon-white"></i> Contact Us</a></li>
+			<li><a href="/faq.php"><i class="icon-question-sign icon-white"></i> FAQ</a></li>
+				
                 <?php
                 if(isset($_COOKIE['admin_id'])){
                     echo '<li><a href="/admin/panel.php"><i class="icon-th-large icon-white"></i> Panel</a><li>';
@@ -45,7 +50,7 @@
         else {
             echo '<li><a href="/authentication/logout.php">Sign Out</a></li>';
         }
-?>
+        ?>
             </ul>
             </li>
           </ul>

@@ -25,7 +25,7 @@
                 </ul>
                 </li>
 			<li class="dropdown">
-               <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon-book icon-white"></i> Classes</a>
+               <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon-book icon-white"></i> Class Details & Registration</a>
                 <ul class="dropdown-menu">	
 					<li><a href="/classes/classdescriptions.php">Class Descriptions</a></li>
 					<li><a href="/classes/registration.php">Registration</a></li>
@@ -56,7 +56,7 @@
               <li class="dropdown">
                <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon-user icon-white"></i> Sign In <strong class="caret"></strong></a>
               <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;"> ';
-            include("admin/login.php");
+            include("../admin/login.php");
             echo '
            </div>
             </li>
