@@ -98,7 +98,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/assets/bootstrap/js/jquery.js"></script>
     <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
 	  <script type="text/javascript">
 	  $(document).ready(function(){
 			$("#registerHere").validate({
@@ -109,6 +109,7 @@
                     parent_email:{
                         email: true
                     },
+					user_school:"required",
 					user_phone:"required",
 					user_email:{
 							required:true,
@@ -127,6 +128,8 @@
 					user_fname:"Enter your first name",
 					user_lname:"Enter your last name",
 					user_grade:"Enter your grade",
+					user_school:"Enter your school",
+					user_phone:"Enter your phone number",
 					user_email:{
 						required:"Enter your email address",
 						email:"Enter valid email address"
