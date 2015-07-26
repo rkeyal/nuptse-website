@@ -58,10 +58,8 @@ var stepcarousel={
 	},
 
 	addnavbuttons:function($, config, currentpanel){
-		//config.$leftnavbutton=$('<img src="'+config.defaultbuttons.leftnav[0]+'" class="' + config.galleryid + '_navbutton">').css({zIndex:50, position:'absolute', left:config.offsets.left+config.defaultbuttons.leftnav[1]+'px', top:config.offsets.top+config.defaultbuttons.leftnav[2]+'px', cursor:'hand', cursor:'pointer'}).attr({title:'Back '+config.defaultbuttons.moveby+' panels'}).appendTo('body')
-		//config.$rightnavbutton=$('<img src="'+config.defaultbuttons.rightnav[0]+'" class="'  + config.galleryid + '_navbutton">').css({zIndex:50, position:'absolute', left:config.offsets.left+config.$gallery.get(0).offsetWidth+config.defaultbuttons.rightnav[1]+'px', top:config.offsets.top+config.defaultbuttons.rightnav[2]+'px', cursor:'hand', cursor:'pointer'}).attr({title:'Forward '+config.defaultbuttons.moveby+' panels'}).appendTo('body')
-		config.$leftnavbutton=$('<img src="'+config.defaultbuttons.leftnav[0]+'" class="' + config.galleryid + '_navbutton">').css({zIndex:50, position:'absolute', left:config.offsets.left+config.defaultbuttons.leftnav[1]+'px', top:config.offsets.top+config.defaultbuttons.leftnav[2]+'px', cursor:'hand', cursor:'pointer'}).attr({title:'Back '+config.defaultbuttons.moveby+' panels'}).appendTo('body')
-		config.$rightnavbutton=$('<img src="'+config.defaultbuttons.rightnav[0]+'" class="'  + config.galleryid + '_navbutton">').css({zIndex:50, position:'absolute', left:config.offsets.left+config.$gallery.get(0).offsetWidth+config.defaultbuttons.rightnav[1]+'px', top:config.offsets.top+config.defaultbuttons.rightnav[2]+'px', cursor:'hand', cursor:'pointer'}).attr({title:'Forward '+config.defaultbuttons.moveby+' panels'}).appendTo('body')
+		config.$leftnavbutton=$('<img src="'+config.defaultbuttons.leftnav[0]+'" class="' + config.galleryid + '_navbutton">').css({zIndex:50, position:'absolute', left:config.offsets.left+config.defaultbuttons.leftnav[1]+'px', top:config.offsets.top+config.defaultbuttons.leftnav[2]+'px', cursor:'hand', cursor:'pointer'}).attr({title:''}).appendTo('body')
+		config.$rightnavbutton=$('<img src="'+config.defaultbuttons.rightnav[0]+'" class="'  + config.galleryid + '_navbutton">').css({zIndex:50, position:'absolute', left:config.offsets.left+config.$gallery.get(0).offsetWidth+config.defaultbuttons.rightnav[1]+'px', top:config.offsets.top+config.defaultbuttons.rightnav[2]+'px', cursor:'hand', cursor:'pointer'}).attr({title:''}).appendTo('body')
 		config.$leftnavbutton.bind('click', function(){ //assign nav button event handlers
 			stepcarousel.stepBy(config.galleryid, -config.defaultbuttons.moveby)
 		})
@@ -278,7 +276,7 @@ var stepcarousel={
 				var srcs=[$templatebutt.attr('src'), $templatebutt.attr('data-over'), $templatebutt.attr('data-select')] //remember control's over and out, and selected image src
 			for (var i=0; i<asize; i++){
 				var moveto=Math.min(i*moveby, config.lastvisiblepanel)
-				buttonarray.push(buttonhtml.replace(/>/, ' data-index="'+i+'" data-moveto="'+moveto+'" title="Move to Panel '+(moveto+1)+'">') +'\n')
+				buttonarray.push(buttonhtml.replace(/>/, ' data-index="'+i+'" data-moveto="'+moveto+'" title="">') +'\n')
 				controlpoints.push(moveto) //store panel index each control goes to when clicked on
 			}
 			var $controls=config.$paginatediv.html(buttonarray.join('')).find(buttontag) //replace template link with links and return them
