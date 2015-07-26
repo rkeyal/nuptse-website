@@ -7,8 +7,8 @@
     <h1>Class Descriptions</h1>
 	<h3 style="color: #00b6e5;">Fall and Winter Classes</h3>
 	<p>
-		<img src="/images/RevisedNuptseFlier1.png" width="49%"></img>
-		<img src="/images/RevisedNuptseFlier2.png" width="49%"></img>
+		<img src="/images/NuptseFlier1RevA3.png" width="49%"></img>
+		<img src="/images/NuptseFlier2RevA3.png" width="49%"></img>
 	</p>
 	<h3 style="color: #00b6e5;">
 		Available Discounts
