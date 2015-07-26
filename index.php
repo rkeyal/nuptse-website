@@ -22,8 +22,8 @@
 		position: relative; /*leave this value alone*/
 		border: 0px solid white;
 		overflow: scroll; /*leave this value alone*/
-		width: 1320px; /*Width of Carousel Viewer itself*/
-		height: 600px; /*Height should enough to fit largest content's height*/
+		width: 80vw; /*Width of Carousel Viewer itself*/
+		height: 40vw; /*Height should enough to fit largest content's height*/
 		-webkit-box-sizing: border-box; /* set box model so container width and height value includes any padding/border defined */
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
@@ -37,9 +37,9 @@
 
 		.stepcarousel .panel{
 		float: left; /*leave this value alone*/
-		overflow: hidden; /*clip content that go outside dimensions of holding panel DIV*/
+		overflow: hiddenh; /*clip content that go outside dimensions of holding panel DIV*/
 		margin: 10px; /*margin around each panel*/
-		width: 1320px; /*Width of each panel holding each content. If removed, widths should be individually defined on each content DIV then. */
+		width: 80vw; /*Width of each panel holding each content. If removed, widths should be individually defined on each content DIV then. */
 		}
 
 		span.paginatecircle{ /* CSS for paginate circle spans. Required */
@@ -73,7 +73,7 @@
 			panelclass: 'panel', //class of panel DIVs each holding content
 			autostep: {enable:true, moveby:1, pause:3000},
 			panelbehavior: {speed:500, wraparound:true, wrapbehavior:'slide', persist:true},
-			defaultbuttons: {enable: true, moveby: 1, leftnav: ['/images/arrow_left.png', 20, 262], rightnav: ['/images/arrow_right.png', -85, 262]},
+			defaultbuttons: {enable: true, moveby: 1, leftnav: ['/images/arrow_left.png', 20, 240], rightnav: ['/images/arrow_right.png', -85, 240]},
 			statusvars: ['statusA', 'statusB', 'statusC'], //register 3 variables that contain current panel (start), current panel (last), and total panels
 			contenttype: ['inline'] //content setting ['inline'] or ['ajax', 'path_to_external_file']
 		})
@@ -84,41 +84,42 @@
 
   <?php include ("header.php"); ?>
   <body>
-  
-	<div id="mygallery" class="stepcarousel">
-		<div class="belt">
+	<center>
+		<div id="mygallery" class="stepcarousel">
+			<div class="belt">
 
-			<div class="panel">
-				<img src="/images/Slide1.png" />
+				<div class="panel">
+					<img src="/images/Slide1.png"/>
+				</div>
+
+				<div class="panel">
+					<img src="/images/Slide2.png" />
+				</div>
+
+				<div class="panel">
+					<img src="/images/Slide3.png" />
+				</div>
+
+				<div class="panel">
+					<img src="/images/Slide4.png" />
+				</div>
+
+				<div class="panel">
+					<img src="/images/Slide5.png" />
+				</div>
+
+				<div class="panel">
+					<img src="/images/Slide6.png" />
+				</div>
+
 			</div>
-
-			<div class="panel">
-				<img src="/images/Slide2.png" />
-			</div>
-
-			<div class="panel">
-				<img src="/images/Slide3.png" />
-			</div>
-
-			<div class="panel">
-				<img src="/images/Slide4.png" />
-			</div>
-
-			<div class="panel">
-				<img src="/images/Slide5.png" />
-			</div>
-
-			<div class="panel">
-				<img src="/images/Slide6.png" />
-			</div>
-
-		</div>
 	</div>
 
 
-	<p id="mygallery-paginate">
-		<span class="paginatecircle" data-moveby="1"></span>
-	</p>
+		<p id="mygallery-paginate">
+			<span class="paginatecircle" data-moveby="1"></span>
+		</p>
+	</center>
 	
 
     <?php include("navbar/navbar.php"); ?>
