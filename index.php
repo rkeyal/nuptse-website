@@ -129,7 +129,7 @@
 		if (isset($_COOKIE["fname"]))
 			include("resources.php");
 	?>
-	<div class="span9">
+	<!--<div class="span9">
 	  <div class="hero-unit">
             <h1>Welcome</h1>
             <br />
@@ -138,7 +138,7 @@
         <p><a class="btn btn-primary btn-large" href="register/">Register now &raquo;</a></p>
 	  </div>
 	</div>
-      </div>
+      </div>-->
 
       <!-- Example row of columns -->
       <div class="row">
