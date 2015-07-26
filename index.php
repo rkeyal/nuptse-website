@@ -89,19 +89,27 @@
 			<div class="belt">
 
 				<div class="panel">
-					<img src="/images/Slide1.png"/>
+					<a href="/classes/registration.php">
+						<img src="/images/Slide1.png"/>
+					</a>
 				</div>
 
 				<div class="panel">
-					<img src="/images/Slide2.png" />
+					<a href="/classes/registration.php">
+						<img src="/images/Slide2.png" />
+					</a>
 				</div>
 
 				<div class="panel">
-					<img src="/images/Slide3.png" />
+					<a href="/classes/classdescriptions.php">
+						<img src="/images/Slide3.png" />
+					</a>
 				</div>
 
 				<div class="panel">
-					<img src="/images/Slide4.png" />
+					<a href="/classes/classdescriptions.php">
+						<img src="/images/Slide4.png" />
+					</a>
 				</div>
 
 				<div class="panel">
