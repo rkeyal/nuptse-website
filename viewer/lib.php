@@ -24,7 +24,7 @@
         }
         $input  = cleanInput($input);
 	$link = mysqli_connect('localhost', 'root', '8PaHucre');
-        $output = mysqli_real_escape_string($input);
+        $output = $link->real_escape_string($input);
     }
     return $output;
 }
