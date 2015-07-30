@@ -24,7 +24,7 @@ $mysqli->close();
 </div>
 <button type="submit" class="btn btn-danger">Change Password</button>
 </form>
-<?php if ($_GET["changed"] == "true"){
+<?php if (!empty($_GET['changed']) and $_GET["changed"] == "true"){
     echo '<div class="alert alert-success">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
             <strong>Success!</strong> Your password was changed successfully.
