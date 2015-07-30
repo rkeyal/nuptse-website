@@ -22,8 +22,8 @@
 		position: relative; /*leave this value alone*/
 		border: 0px solid white;
 		overflow: scroll; /*leave this value alone*/
-		width: 80vw; /*Width of Carousel Viewer itself*/
-		height: 40vw; /*Height should enough to fit largest content's height*/
+		width: 60vw; /*Width of Carousel Viewer itself*/
+		height: 30vw; /*Height should enough to fit largest content's height*/
 		-webkit-box-sizing: border-box; /* set box model so container width and height value includes any padding/border defined */
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
