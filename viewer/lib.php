@@ -23,8 +23,8 @@
             $input = stripslashes($input);
         }
         $input  = cleanInput($input);
-	$link = mysql_connect('localhost', 'root', '8PaHucre');
-        $output = mysql_real_escape_string($input);
+	$link = mysqli_connect('localhost', 'root', '8PaHucre');
+        $output = mysqli_real_escape_string($input);
     }
     return $output;
 }
@@ -50,7 +50,7 @@ function setUnansweredQuestions($id, $user,$total) {
     $mysqli->close();
     if ($bool) {
         $redirectbase = 'Location: http://' . $_SERVER["SERVER_NAME"] . '/viewer?id=' . $id;
-        header($redirectbase);
+        //header($redirectbase);
     }
 }
 
@@ -90,7 +90,7 @@ function checkExpiryDate($id, $user, $total) {
         }
         if ($times > 0) {
             $redirectbase = 'Location: http://' . $_SERVER["SERVER_NAME"] . '/viewer?id=' . $id;
-            header($redirectbase);
+            //header($redirectbase);
         }
         return true;
     }
