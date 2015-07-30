@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link href="/assets/bootstrap/css/cyborg.css" rel="stylesheet">
+    <link href="/assets/bootstrap/css/readable.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
