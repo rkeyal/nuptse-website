@@ -19,7 +19,7 @@ foreach ($indices as &$index) {
 }
 
 function percentage($var, $array){
-    $raw = ( $var / array_sum($array) ) * 100;
+    $raw = ( $var / max(array_sum($array),1) ) * 100;
     $rounded = round($raw,2);
     return $rounded;
 }
