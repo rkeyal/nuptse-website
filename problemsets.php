@@ -68,7 +68,7 @@
         while ($row = $res2->fetch_assoc()) {
             parse_str($row['users_status'], $stats);
             $total = $total + 1;
-            if (in_array($stats[$id], $allowed)){
+            if (!empty($stats[$id]) and in_array($stats[$id], $allowed)){
                 $answered = $answered + 1;
             }
         }
