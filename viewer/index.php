@@ -63,14 +63,14 @@
 		if($isExpired == true){ 
 		echo "
                        <p>Download the answers <a href='../download.php?id=$problemset_id'>here.</a></p>
-                <object data='../pdfs/$problemset_id.pdf' type='application/pdf' width='100%' height='100%'>
+                <object data='../pdfs/$problemset_id.pdf' type='application/pdf' width='100%' height='600px'>
                        <p>Looks like you can't view <a href='../pdfs/$problemset_id.pdf'>this file.</a></p>
                     </object>
 		";
 		}
 		else {
 		echo "
-                <object data='../pdfs/$problemset_id.pdf' type='application/pdf' width='100%' height='100%'>
+                <object data='../pdfs/$problemset_id.pdf' type='application/pdf' width='100%' height='600px'>
                        <p>Looks like you can't view <a href='../pdfs/$problemset_id.pdf'>this file.</a></p>
                     </object>
 		";
