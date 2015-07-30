@@ -22,8 +22,9 @@
         while ($row = $res->fetch_assoc()) {
             extract($row);
         }
-        $tables = array_filter(explode(",",$problem_sets));
-        if (count($tables) > 0) {
+        //$tables = array_filter(explode(",",$problem_sets));
+        if (/*count($tables) > 0*/ isset($problem_sets)) {
+			/**/$tables = array_filter(explode(",",$problem_sets));/**/
         foreach ($tables as &$ps) {
             $number = substr($ps,2);
             $mysqli = new mysqli("localhost", "root", "8PaHucre", "nuptse_questions");
