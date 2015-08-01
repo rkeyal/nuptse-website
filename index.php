@@ -84,6 +84,7 @@
 
   <?php include ("header.php"); ?>
   <body>
+    <?php include("navbar/navbar.php"); ?>
 	<center>
 		<div id="mygallery" class="stepcarousel">
 			<div class="belt">
@@ -130,7 +131,6 @@
 	</center>
 	
 
-    <?php include("navbar/navbar.php"); ?>
     <div class="container">
     <div class="container-fluid">
       <div class="row-fluid">
