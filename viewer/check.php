@@ -1,7 +1,7 @@
 <?php
 	include("lib.php");
 	$id = $_POST['id'];
-    	$user = $_COOKIE['user_id'];
+    $user = $_COOKIE['user_id'];
 	$question = $_POST['question'];
 	$answer = sanitize($_POST['answer' . $question]);
 	$query = "select * from " . $id . " where id=" . $question . ";";
@@ -11,7 +11,7 @@
 	$result->free();
 	$mysqli->close();
 
-	$isCorrect=(abs($questiondata['answer']  - $answer) <= ($questiondata['answer'] * $questiondata['tolerance']));
+	$isCorrect=(abs($questiondata['answer']  - $answer) <= (abs($questiondata['answer'] * $questiondata['tolerance'])));
 	setUserQuestionStatus($id, $user, $question, $questiondata['users_status'], $isCorrect);
 
 	$redirectbase = 'Location: http://' . $_SERVER["SERVER_NAME"] . '/viewer?id=' . $id . '&q=' . $question . '&correct=';
