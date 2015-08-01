@@ -1,7 +1,7 @@
 <?php
 	include("lib.php");
 	$id = $_POST['id'];
-    $user = $_COOKIE['user_id'];
+	$user = $_COOKIE['user_id'];
 	$question = $_POST['question'];
 	$answer = sanitize($_POST['answer' . $question]);
 	$query = "select * from " . $id . " where id=" . $question . ";";
