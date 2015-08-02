@@ -5,8 +5,8 @@
 		<?php include("../navbar/navbar.php"); ?>
 		<div class="container" >
 			<h1>Foundation Overview</h1>
-			<object data="Nuptse%20Foundation%20Overview%20Rev%20D3.pdf" type="application/pdf" width="100%" height="800px">
-				<p>Looks like you can't view <a href="Nuptse%20Foundation%20Overview%20Rev%20D3.pdf">this file.</a></p>
+			<object data="NuptseFoundationOverview.pdf" type="application/pdf" width="100%" height="800px">
+				<p>Looks like you can't view <a href="NuptseFoundationOverview.pdf">this file.</a></p>
 			</object>
 			<?php include("../footer.php"); ?>
 		</div> <!-- /container -->	
