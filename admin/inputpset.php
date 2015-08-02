@@ -19,7 +19,7 @@
 	  	<?php
 			for ($i = 1; $i <= $_POST['questioncount']; $i++){
 			    echo $i . " <input type=\"text\" name=\"question" . $i . "\">";
-			echo "	tolerance:  ";
+			echo "	relative tolerance:  ";
 			echo "<select name='error$i'>
 			<option value='0.00001'>0.00</option>
 			<option value='0.01'>0.01</option>
