@@ -89,7 +89,7 @@
 		if (isset($_COOKIE["fname"]))
 			include("resources.php");
 	?>
-	<div align="right">
+	<div align=<?php if (isset($_COOKIE["fname"])) echo '"right"'; else echo '"center"'; ?>>
 		<div id="mygallery" class="stepcarousel">
 			<div class="belt">
 
