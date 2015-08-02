@@ -215,11 +215,11 @@
     </div>
           <p><a class="btn" href="#">View details &raquo;</a></p>
        </div>
-        <div class="span5">
+        <!--<div class="span5">
           <h2>Upcoming Events</h2>
            <p>Coming Soon.</p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
-       </div>
+       </div>-->
       </div>
       <?php include("footer.php"); ?>
 
