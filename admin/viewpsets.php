@@ -61,8 +61,8 @@
             <h4>" . $uploaders[$i] . "</h4>
             <h4>" . $uploadeds[$i] . " to " . $expires[$i] . "</h4>";
 	?>
-	    <a href="http://nuptsefoundation.org/pdfs/<?php echo $column[$i]; ?>.pdf">View problem set</a><br />
-		<a href="/admin/inputpset.php?edit=<?php echo $column[$i]; ?>">Edit problem set</a><br />
+	    <a href="/pdfs/<?php echo $column[$i]; ?>.pdf">View problem set</a><br />
+		<a href="/admin/editpset.php?edit=<?php echo $column[$i]; ?>">Edit problem set answers</a><br />
             <table class='table table-striped table-bordered'>
             <tr>
             <th>User</th>
