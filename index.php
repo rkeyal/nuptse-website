@@ -152,7 +152,7 @@
 
       <!-- Example row of columns -->
       <div class="row">
-        <div class="span5">
+        <div class="span10">
           <div id="mainContent">
       <div class="row">
 	<div class="small-12 columns">
@@ -180,22 +180,22 @@
 		 ?>
 	        <div class="item">
 	   <h4><?php echo $item->get_title(); ?></h4>
-	    <h5><?php echo $item->get_date('j F Y | g:i a'); ?></h5> 
+	    <h5><?php echo $item->get_date('j F Y'); ?></h5> <!-- code after Y =  | g:i a-->
 						
 	                  <?php
 		               if(strlen($item->get_content()) < 225 )
 		               {
 		   
-						echo $item->get_content();
+							echo $item->get_content();
 
 						}
 						else
 						{
 
 								$str = $item->get_content();
-								$str2 = substr($str,0,255);
-								echo $str2;
-						
+								$str2 = substr($str,0,225);
+								echo $str2, "... ";
+								?><a href= <?php echo $item->get_link() ?>>Full Post</a><?php
 						}
 		   
 		    
@@ -217,7 +217,7 @@
 	</div>
       </div>
     </div>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <!--<p><a class="btn" href="#">View details &raquo;</a></p>-->
        </div>
         <!--<div class="span5">
           <h2>Upcoming Events</h2>
