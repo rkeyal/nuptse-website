@@ -39,7 +39,7 @@
 		float: left; /*leave this value alone*/
 		overflow: hiddenh; /*clip content that go outside dimensions of holding panel DIV*/
 		margin: 10px; /*margin around each panel*/
-		width: 80vw; /*Width of each panel holding each content. If removed, widths should be individually defined on each content DIV then. */
+		width: 60vw; /*Width of each panel holding each content. If removed, widths should be individually defined on each content DIV then. */
 		}
 
 		span.paginatecircle{ /* CSS for paginate circle spans. Required */
@@ -73,7 +73,7 @@
 			panelclass: 'panel', //class of panel DIVs each holding content
 			autostep: {enable:true, moveby:1, pause:3000},
 			panelbehavior: {speed:500, wraparound:true, wrapbehavior:'slide', persist:true},
-			defaultbuttons: {enable: true, moveby: 1, leftnav: ['/images/arrow_left.png', 20, 240], rightnav: ['/images/arrow_right.png', -60, 240]},
+			defaultbuttons: {enable: true, moveby: 1, leftnav: ['/images/arrow_left.png', 20, 180], rightnav: ['/images/arrow_right.png', -60, 180]},
 			statusvars: ['statusA', 'statusB', 'statusC'], //register 3 variables that contain current panel (start), current panel (last), and total panels
 			contenttype: ['inline'] //content setting ['inline'] or ['ajax', 'path_to_external_file']
 		})
