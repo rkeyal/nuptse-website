@@ -71,7 +71,14 @@
                 echo "<th>#$id</th>";
             }
             echo "</tr>";
-            $code = array("0" => "X", "1" => "1", "2" => "0", "3" => "1", "4" => "0", "6" => "X");
+            $code = array(
+				"0" => '<font color="brown">&#x2610;</font><font color="brown">&#x2610;</font>',
+				"1" => '<font color="green">&#x2611;</font><font color="brown">&#x2610;</font>',
+				"2" => '<font color=  "red">&#x2612;</font><font color="brown">&#x2610;</font>',
+				"3" => '<font color=  "red">&#x2612;</font><font color="green">&#x2611;</font>',
+				"4" => '<font color=  "red">&#x2612;</font><font color=  "red">&#x2612;</font>',
+				"6" => '<i class="icon-time" />'//'<font color="blue">&#x1f55b;</font>'
+			);
             foreach ($users as $user){
                 echo "<tr><td>$user</td>";
                 foreach ($statuses as $status){
