@@ -85,7 +85,11 @@
   <?php include ("header.php"); ?>
   <body>
     <?php include("navbar/navbar.php"); ?>
-	<center>
+	<?php
+		if (isset($_COOKIE["fname"]))
+			include("resources.php");
+	?>
+	<div align="right">
 		<div id="mygallery" class="stepcarousel">
 			<div class="belt">
 
@@ -134,10 +138,7 @@
     <div class="container">
     <div class="container-fluid">
       <div class="row-fluid">
-	<?php
-		if (isset($_COOKIE["fname"]))
-			include("resources.php");
-	?>
+	
 	<!--<div class="span9">
 	  <div class="hero-unit">
             <h1>Welcome</h1>
