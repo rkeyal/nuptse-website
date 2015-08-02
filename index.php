@@ -126,10 +126,10 @@
 				</div>
 
 			</div>
-	</div>
+		</div>
 
 
-		<p id="mygallery-paginate">
+		<p id="mygallery-paginate" align=<?php if (isset($_COOKIE["fname"])) echo '"right"'; else echo '"center"'; ?>>
 			<span class="paginatecircle" data-moveby="1"></span>
 		</p>
 	</div>
