@@ -132,7 +132,7 @@
 		<p id="mygallery-paginate">
 			<span class="paginatecircle" data-moveby="1"></span>
 		</p>
-	</center>
+	</div>
 	
 
     <div class="container">
