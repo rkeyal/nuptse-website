@@ -17,8 +17,8 @@
                <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon-align-left icon-white"></i> About</a>
                 <ul class="dropdown-menu">
 					<li><a href="/about/foundationoverview.php">Foundation Overview</a></li>
-                    <!-- <li><a href="../about/StaffPage.php">Student Staff</a></li> -->
-                    <!-- <li><a href="../about/NuptseBoard.php">Board Members</a></li> -->
+                     <li><a href="../about/StaffPage.php">Student Staff</a></li> 
+                     <li><a href="../about/NuptseBoard.php">Board Members</a></li> 
                 </ul>
                 </li>
 			<li class="dropdown">
