@@ -181,22 +181,26 @@
 	        <div class="item">
 	   <h4><?php echo $item->get_title(); ?></h4>
 	    <h5><?php echo $item->get_date('j F Y | g:i a'); ?></h5> 
-		
-	    <?php
-		   if(strlen($item->get_content()) < 225 )
-		   {
+						
+	                  <?php
+		               if(strlen($item->get_content()) < 225 )
+		               {
 		   
-	          echo $item->get_content();
-		   }
-		   else
-		   {
-		      $str = $item->get_content();
-			  $str2 = substr($str,0,255);
-			  echo $str2;
-		   }
+						echo $item->get_content();
+
+						}
+						else
+						{
+
+								$str = $item->get_content();
+								$str2 = substr($str,0,255);
+								echo $str2;
+						
+						}
 		   
 		    
-	    ?>
+						?>
+							
 		<hr>
 		<?php
 		}
