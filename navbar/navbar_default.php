@@ -33,9 +33,9 @@
            </ul>
 	    <ul class="nav pull-right">
         <?php if ($page != '/admin/') {
-            echo '
-	      <li class="divider-vertical"></li>
-              <li><a href="/register"><i class="icon-pencil icon-white"></i> Sign Up</a></li>
+            /* <li class="divider-vertical"></li>
+              <li><a href="/register"><i class="icon-pencil icon-white"></i> Sign Up</a></li> */
+			echo '
 	      <li class="divider-vertical"></li>
               <li class="dropdown">
                <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon-user icon-white"></i> Sign In <strong class="caret"></strong></a>

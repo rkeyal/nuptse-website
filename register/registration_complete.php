@@ -4,8 +4,8 @@
 <body>
 	<?php include("../navbar/navbar.php"); ?>
 	<div class="container">
-        <h1>Registration Complete!</h1>
-        <p>Log in to your account or return to the home page <a href="../index.php">here</a>.</p>
+        <h1>Request Complete!</h1>
+        <p>Return to the home page <a href="../index.php">here</a>.</p>
         <?php include("../login.php"); ?>
     <?php include("../footer.php"); ?>
     </div><!--/row-->

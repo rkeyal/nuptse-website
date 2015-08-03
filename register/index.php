@@ -73,7 +73,7 @@
 				<div class="control-group">
 					<label class="control-label" for="input01"></label>
 					  <div class="controls">
-					   <button type="submit" class="btn btn-success" rel="tooltip" title="first tooltip">Create My Account</button>
+					   <button type="submit" class="btn btn-success" rel="tooltip" title="first tooltip">Request An Account</button>
 					  </div>
 				</div>
                 <?php

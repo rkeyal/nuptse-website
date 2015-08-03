@@ -9,7 +9,7 @@
         <p>Your account is currently pending approval, if you have any questions please contact <a href="mailto:aseem.keyal@gmail.com">aseem.keyal@gmail.com</a>.</p>';
 } else {
     echo '<h1>Login Failed</h1>
-        <p>Incorrect email or password, please contact <a href="mailto:aseem.keyal@gmail.com">aseem.keyal@gmail.com</a> if trying to log in again does not work.</p>';
+        <p>Incorrect email or password, please contact <a href="mailto:nuptsefoundation@gmail.com">nuptsefoundation@gmail.com</a> if trying to log in again does not work.</p>';
 }
 ?>
         <?php include("./login.php"); ?>
