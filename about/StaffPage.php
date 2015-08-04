@@ -154,7 +154,7 @@
 			</table>
 			
 										<!------------------------------- SUPPORT FUNCTIONS ------------------------------->
-			<h2 style="margin-bottom:-25px;">Coaching and Contest</h2>
+			<h2 style="margin-bottom:-25px;">Support Functions</h2>
 			<hr />
 			<table>
 			  <col width="20%">
