@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <?php include ("header.php"); ?>
+  <style>
+	p {
+		text-indent: 50px;
+	}
+	p,h4 {
+    margin-left: 2cm;
+	}
+	</style>
   <body>
     <?php include("navbar/navbar.php"); ?>
     <div class="container" >
@@ -15,7 +23,7 @@
 				<p>A: The diagnostic helps us evaluate the learning needs of each student, so that we can place him/her in the appropriate class among peers whom with together they can learn from and motivate each other.</p>
 
 		<h4>Q: How do students advance to the next level class?</h4>
-				A: Students must score at least an average of 50% on all homework assigned and all quizzes and tests taken in their current class. They must also take a diagnostic test for the next level and score above 30%.</p>
+				<p>A: Students must score at least an average of 50% on all homework assigned and all quizzes and tests taken in their current class. They must also take a diagnostic test for the next level and score above 30%.</p>
 
 		<h4>Q: How often are the classes?</h4>
 				<p>A: Classes are held once/week during the school year and twice/week during summer.</p>

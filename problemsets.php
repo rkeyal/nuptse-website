@@ -34,7 +34,7 @@
             while ($row = $res->fetch_assoc()) {
                 $status = getStatus($user_id, $number);
                 $message = "Open Problems";
-                $date = date('Y-m-d');
+                $date = date('Y-n-d');
                 if ($date > $row['expire'] and $status[1] == 'btn-primary') {
                     $status[1] = 'btn-danger';
                     $message = "Open Solutions";
