@@ -1,15 +1,23 @@
-<?php
-include("checkauth.php");
-?>
+<?php include("checkauth.php"); ?>
 <html>
 <?php include("../header.php"); ?>
 <body>
 <?php include("../navbar/navbar.php"); ?>
-<div class="container">
-     <?php
+<div class="container" style="padding:0px 50px">
+    <?php
 	$psid = 1000;
     $date = $_POST["expiry"];
-    $groups = $_POST["group"];
+    //$groups = $_POST["group"];
+	$groupn = $_POST["groups"];
+	$groups = "";
+	for ($i = 1; $i <= $groupn; $i++) {
+		if (!empty($_POST["group" . $i])) {
+			if ($groups != "") $groups = $groups . ",";
+			$groups = $groups . $_POST["group" . $i];
+		}
+	}
+	/*echo http_build_query($_POST) . '<br />';
+	echo $groups . '<br />';*/	//debug
     $name = $_POST["name"];
     $id = $_COOKIE["admin_id"];
 	$temp = explode(".", $_FILES["problemsetpdf"]["name"]);
