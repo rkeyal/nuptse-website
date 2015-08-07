@@ -179,11 +179,14 @@
 		 {
 		 ?>
 	        <div class="item">
-	   <h4><?php echo $item->get_title(); ?></h4>
-	    <h5><?php echo $item->get_date('j F Y'); ?></h5> <!-- code after Y =  | g:i a-->
-						
+	   <h4><?php echo $item->get_title(); 
+	   echo " || ";
+	   echo $item->get_date('j F Y');  //code after Y =  | g:i a
+	   echo " || "; ?>
+	   <a href= <?php echo $item->get_link() ?>>Link to Post</a></h4>
+					
 	                  <?php
-		               if(strlen($item->get_content()) < 225 )
+					  /*if(strlen($item->get_content()) < 225 )
 		               {
 		   
 							echo $item->get_content();
@@ -196,10 +199,9 @@
 								$str2 = substr($str,0,225);
 								echo $str2, "... ";
 								?><a href= <?php echo $item->get_link() ?>>Full Post</a><?php
-						}
-		   
-		    
+						}*/
 						?>
+						
 							
 		<hr>
 		<?php
