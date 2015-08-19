@@ -14,7 +14,7 @@
 		Available Discounts
 	</h3>
 	<p>
-		Register by August 23rd for 5% Early Registration Discount<br>
+		Register by September 5th for 5% Early Registration Discount<br>
 		Register for both Fall and Winter sessions for 10% Broad Commitment Discount<br>
 		Register for both math and science classes for 10% Multi-Program Discount<br>
 		Refer friends for additional discounts of 3% per student registered (Max: 15%)
