@@ -63,6 +63,7 @@
 	?>
 	    <a href="/pdfs/<?php echo $column[$i]; ?>.pdf">View problem set</a><br />
 		<a href="/admin/editpset.php?edit=<?php echo $column[$i]; ?>">Edit problem set answers</a><br />
+		<a href="./exportpset.php?pset=<?php echo $column[$i]; ?>">Export as CSV</a> (can be exported to Excel, etc.)<br /> 
             <table class='table table-striped table-bordered'>
             <tr>
             <th>User</th>
