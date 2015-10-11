@@ -4,7 +4,6 @@
 			<li class="nav-header">My Account</li>
 				<li><a href="problemsets.php">Problem Sets</a></li>
 				<li><a href="profile.php">Profile Page</a></li>
-				<li><a href="/admin/">Admin Page</a></li>
 			<li class="nav-header">External Resources</li>
 				<li><a href="http://www.artofproblemsolving.com">Art of Problem Solving</a></li>
 				<li><a href="http://www.artofproblemsolving.com/liz/Alcumus/index.php">AoPS Alcumus</a></li>
