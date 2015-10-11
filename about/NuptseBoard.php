@@ -4,7 +4,7 @@
 	<body>
 		<?php include("../navbar/navbar.php"); ?>
 		<div class="container" >
-			<h1 style="text-align:center;">Nuptse Board Members</h1>
+			<h1 style="text-align:center;text-decoration:underline;">Nuptse Board Members</h1>
 			<br />
 			
 			<table>

@@ -4,7 +4,7 @@
 	<body>
 		<?php include("../navbar/navbar.php"); ?>
 		<div class="container" >
-			<h1 style="text-align:center;">Nuptse Student Staff</h1>
+			<h1 style="text-align:center;text-decoration: underline">Nuptse Student Staff</h1>
 			<br />
 			
 										<!------------------------------- AWARENESS ------------------------------->

@@ -18,8 +18,8 @@
                 <ul class="dropdown-menu">
 					<li><a href="/about/foundationoverview.php">Foundation Overview</a></li>
                     <!--<li><a href="/about/2015-16%20Class%20Information%20Rev%20D.pdf">Class Schedule</a></li>
-                    <li><a href="../about/StaffPage.php">Student Staff</a></li>
-                    <li><a href="../about/NuptseBoard.php">Board Members</a></li>-->
+                    <li><a href="../about/StaffPage.php">Student Staff</a></li>-->
+                    <li><a href="../about/NuptseBoard.php">Board Members</a></li>
                 </ul>
                 </li>
 				
