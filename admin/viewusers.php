@@ -17,7 +17,7 @@
 	 $result = $mysqli->query($query);
 
          while ($row = $result->fetch_assoc()) {
-              echo "<tr><td>" . $row['id'] . "</td><td>" . $row['lname'] . "</td><td>" . $row['fname'] . "</td><td>" . $row['email'] . "</td><td>" . $row['school'] . "</td><td><a href=\"/admin/deleteuser.php?id=" . $row['id'] . "\" onclick=\"return confirm('Are you sure?');\">Delete user</a></td></tr>";
+              echo "<tr><td>" . $row['id'] . "</td><td>" . $row['lname'] . "</td><td>" . $row['fname'] . "</td><td>" . $row['email'] . "</td><td>" . $row['school'] . "</td><td><a href=\"/admin/edituser.php?id=". $row['id'] ."\">Edit User </a><a href=\"/admin/deleteuser.php?id=" . $row['id'] . "\" onclick=\"return confirm('Are you sure?');\">Delete user</a></td></tr>";
          }
 
          $result->free();
