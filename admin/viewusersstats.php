@@ -17,9 +17,9 @@
 
          while ($row = $result->fetch_assoc()) {
             parse_str($row['stats'], $userStats);
-            //if (!empty($userStats['first']) and $userStats['first'] != 0) or ((!empty($userStats['second']) and $userStats['second'] != 0) or ((!empty($userStats['incorrect']) and $userStats['incorrect'] != 0) or ((!empty($userStats['expired']) and $userStats['expired'] != 0) or ((!empty($userStats['attempted']) and $userStats['attempted'] != 0)){
-                //echo "<tr><td>" . $row['id'] . "</td><td>" . $row['lname'] . "</td><td>" . $row['fname'] . "</td><td>" . $row['group'] . "</td><td>" . $row['stats'] . "</td></tr>";
-            //}
+            if ((!empty($userStats['first']) and $userStats['first'] != 0) or (!empty($userStats['second']) and $userStats['second'] != 0) or (!empty($userStats['incorrect']) and $userStats['incorrect'] != 0) or (!empty($userStats['expired']) and $userStats['expired'] != 0) or (!empty($userStats['attempted']) and $userStats['attempted'] != 0)){
+                echo "<tr><td>" . $row['id'] . "</td><td>" . $row['lname'] . "</td><td>" . $row['fname'] . "</td><td>" . $row['group'] . "</td><td>" . $row['stats'] . "</td></tr>";
+            }
          }
 
          $result->free();
