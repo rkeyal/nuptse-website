@@ -1,23 +1,15 @@
-<?php include("checkauth.php"); ?>
+<?php
+include("checkauth.php");
+?>
 <html>
 <?php include("../header.php"); ?>
 <body>
 <?php include("../navbar/navbar.php"); ?>
-<div class="container" style="padding:0px 50px">
-    <?php
+<div class="container">
+     <?php
 	$psid = 1000;
     $date = $_POST["expiry"];
-    //$groups = $_POST["group"];
-	$groupn = $_POST["groups"];
-	$groups = "";
-	for ($i = 1; $i <= $groupn; $i++) {
-		if (!empty($_POST["group" . $i])) {
-			if ($groups != "") $groups = $groups . ",";
-			$groups = $groups . $_POST["group" . $i];
-		}
-	}
-	/*echo http_build_query($_POST) . '<br />';
-	echo $groups . '<br />';*/	//debug
+    $groups = $_POST["group"];
     $name = $_POST["name"];
     $id = $_COOKIE["admin_id"];
 	$temp = explode(".", $_FILES["problemsetpdf"]["name"]);
@@ -38,15 +30,13 @@
                 $rows = $result->num_rows;
                 $psid = $rows + 1;
                 $mysqli->close();
-                echo "Upload sucessful";
 		}
-
-		if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/pdfs/" . "ps" . $psid . ".pdf") or file_exists($_SERVER['DOCUMENT_ROOT'] . "/answers/" . "ps" . $psid . "ans.pdf"))
-		{
-			"Problem set " . $psid . " already exists. ";
-		}
-		else
-		{
+		//if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/pdfs/" . "ps" . $psid . ".pdf") or file_exists($_SERVER['DOCUMENT_ROOT'] . "/answers/" . "ps" . $psid . "ans.pdf"))
+		//{
+		//	echo "Problem set " . $psid . " already exists. ";
+		//}
+		//else
+		//{
 			move_uploaded_file($_FILES["problemsetpdf"]["tmp_name"], $_SERVER["DOCUMENT_ROOT"] . "/pdfs/ps" . $psid . ".pdf");
 			move_uploaded_file($_FILES["anspdf"]["tmp_name"], $_SERVER["DOCUMENT_ROOT"] . "/answers/ps" . $psid . "ans.pdf");
             $mysqli = new mysqli("localhost", "root", "8PaHucre", "nuptse_system");
@@ -67,7 +57,8 @@
                 $result = $mysqli->query($query) or die(mysql_error());
             }
             $mysqli->close();
-		}
+			echo "Upload sucessful";
+		//}
 	}
 	else
 	{
