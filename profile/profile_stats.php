@@ -1,15 +1,43 @@
 <?php
 $user = $_COOKIE['user_id'];
-$query = "select stats from users where id=$user;";
 $mysqli = new mysqli("localhost", "root", "8PaHucre", "nuptse_system");
+
+$query = "select stats from users where id=$user;";
 $result = $mysqli->query($query) or die(mysql_error());
-$userData = $result->fetch_assoc();
-$query = "select stats from groups where members like '%$user%';";
+$userOverallData = $result->fetch_assoc();
+
+$query = "select users.group from users where id=$user;";
+$result = $mysqli->query($query) or die(mysql_error());
+$group = $result->fetch_assoc()["group"];
+
+$query = "select stats from groups where id=$group;";
 $result = $mysqli->query($query) or die(mysql_error());
 $groupData = $result->fetch_assoc();
-$result->free();
+
+$query = "select problem_sets from groups where id=$group;";
+$result = $mysqli->query($query) or die(mysql_error());
+$psets = explode(",",$result->fetch_assoc()["problem_sets"]);
+
+$mysqli = new mysqli("localhost", "root", "8PaHucre", "nuptse_questions");
+
+foreach ($psets as &$pset) {
+	$query = "select users_stats from $pset";
+	$result =  mysqli->query($query);
+	$num_questions = $result->num_rows();
+	//echo "<h4>".$pset."</h4>";
+	for($question = 1; $question <= $num_questions; $question++) {
+		$row = $result->fetch_assoc();
+		parse_str($row['users_status'], $users_status);
+		if (array_key_exists($user, $users_status)) {
+			//echo "<p>".$question." ".$users_status[$user]."</p>";
+		}
+	}
+	
+}
+
 $mysqli->close();
-parse_str($userData['stats'],$statsAssoc);
+$result->free();
+parse_str($userOverallData['stats'],$statsAssoc);
 parse_str($groupData['stats'],$statsAssoc2);
 
 $indices = array('first','second','incorrect','expired','attempted');
@@ -17,6 +45,8 @@ foreach ($indices as &$index) {
     if (!isset($statsAssoc[$index])){ $statsAssoc[$index] = 0; }
     if (!isset($statsAssoc2[$index])){ $statsAssoc2[$index] = 0; }
 }
+
+
 
 function percentage($var, $array){
     $raw = ( $var / max(array_sum($array),1) ) * 100;
