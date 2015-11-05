@@ -11,7 +11,7 @@ $mysqli->close();
 <hr />
 <p>Name: <?php echo $_COOKIE['fname'] . " " . $_COOKIE['lname'] ?></p>
 <p>Email: <?php echo $_COOKIE['email'] ?></p>
-<!--<p>ID: <?php echo $_COOKIE['user_id'] ?></p>-->
+<p>ID: <?php echo $_COOKIE['user_id'] ?></p>
 <p>Grade: <?php echo $_COOKIE['grade'] ?></p>
 <!--<p>Group: <?php echo $row['id'] ?></p>-->
 <p>Change Password:</p>
