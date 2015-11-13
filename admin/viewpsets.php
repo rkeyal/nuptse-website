@@ -25,12 +25,12 @@
     <div class="container">
     <div class="container-fluid">
       <div class="span12">
-	<ul class="nav nav-tabs">';
+	<ul class="nav nav-pills">';
         foreach ($column as $pset) {
-            echo "<li><a href='#$pset' data-toggle='tab'>$pset</a></li>";
+            echo "<li><a href='#$pset' data-toggle='pill'>$pset</a></li>";
         }
 	echo '</ul>
-	<div class="tab-content">';
+	<div class="pill-content">';
         for ($i = 0;$i<count($column);$i++){
             $query = "select * from " . $column[$i] . ";";
 
@@ -56,7 +56,7 @@
             }
             $users = array_unique($users);
             error_log(implode(", ", $users),3, "../errors.log");
-            echo "<div class='tab-pane' id='" . $column[$i] . "'>
+            echo "<div class='pill-pane' id='" . $column[$i] . "'>
             <h1>" . $names[$i] . "</h1>
             <h4>" . $uploaders[$i] . "</h4>
             <h4>" . $uploadeds[$i] . " to " . $expires[$i] . "</h4>";
@@ -111,7 +111,7 @@
             echo "</table></div>";
         }
         ?>
-	</div> <!--/tab content-->
+	</div> <!--/pill content-->
       </div> <!--/span-->
     </div> <!-- /container-fluid -->
     </div> <!--/container-->

@@ -26,7 +26,8 @@ echo "Users";
 foreach ($ids as $id) {
 	echo ", #$id";
 }
-echo "\n";
+echo "
+";
 $code = array(
 	"0" => '0',
 	"1" => '1',
@@ -46,16 +47,19 @@ foreach ($users as $user){
 			echo ", ERR";
 		}
 	}
-	echo "\n";
+	echo "
+";
 }
 echo "Answer";
 foreach ($answers as $answer){
 	echo ", " . round($answer, 2);
 }
-echo "\n";
+echo "
+";
 echo "Difficulty";
 foreach ($diffs as $diff){
 	echo ", " . round($diff,2);
 }
-echo "\n";
+echo "
+";
 ?>
