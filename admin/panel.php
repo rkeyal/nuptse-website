@@ -19,6 +19,9 @@
 						<a href="/admin/viewpsets.php">View Problem Sets</a>
 					</li>
 					<li>
+						<a href="/admin/viewpsets.new.php">New Problem Set Viewer</a>
+					</li>
+					<li>
 						<a href="/admin/addpset.php">Add Problem Set</a>
 					</li>
 				</ul>
