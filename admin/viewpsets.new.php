@@ -19,6 +19,8 @@
 				$names[] = $row['name'];
 				$uploaders[] = $row['user'];
 			}
+			$mysqli->close();
+			
 			$query = "select * from groups";
 			$mysqli_g = new mysqli("localhost", "root", "8PaHucre", "nuptse_system");
 			$result_g = $mysqli_g->query($query);
@@ -30,25 +32,28 @@
 				$users[] = $row['members'];
 				$psetsl[] = $row['problem_sets'];
 			}
+			$mysqli_g->close();
+			
 			echo '
-		<div class="container">
+		<div class="container" style="padding:20px 10px">
 			<div class="container-fluid">
 				<div class="span12">
-					<h3>Group #</h3>
-					<ul class="nav nav-tabs">';
+					<ul class="nav nav-pills">
+						<li><h5>Group #</h5></li>';
 			foreach($groups as $gid) {
-				echo "<li><a href='#$gid' data-toggle='tab'>$gid</a></li>";
+				echo "<li><a href='#$gid' data-toggle='pill'>$gid</a></li>";
 			}
 			echo '</ul>
-					<div class="tab-content">';
+					<div class="pill-content">
+						<hr/>';
 			for ($i = 0; $i < count($groups); $i++) {
-				echo "<div class='tab-pane' id='" . $groups[$i] . "'>";
+				echo "<div class='pill-pane' id='" . $groups[$i] . "'>";
 				$psets = explode(",", $psetsl[$i]);
 				echo '
 						<div class="container">
 							<div class="container-fluid">
-								<h5>Problem Set</h5>
-								<ul class="nav nav-pills">';
+								<ul class="nav nav-pills">
+									<li><h6>Problem Set</h6></li>';
 				foreach($psets as $pset) {
 					echo "<li><a href='#" . $groups[$i] . "$pset' data-toggle='pill'>$pset</a></li>";
 				}
@@ -69,6 +74,8 @@
 							$answers[] = $row['answer'];
 							$ids[] = $row['id'];
 						}
+						$mysqli_p->close();
+						
 						$user_f = array();
 						for ($k = 0; $k < count($statuses); $k++) {
 							parse_str($statuses[$k], $x);
@@ -120,18 +127,35 @@
 							}
 							echo "</tr>";
 						}
+						echo "<tr><th>Answer</th>";
+						foreach ($answers as $answer){
+							echo "<td>" . round($answer, 2) . "</td>";
+						}
+						echo "</tr>";
+						/*
+						 * does not reflect the difficulty experienced
+						 * by that group, but rather the overall
+						 * difficulty across all groups.
+						 */
+						echo "<tr><th>Difficulty</th>";
+						foreach ($diffs as $diff){
+							echo "<td>" . round($diff,2) . "</td>";
+						}
 						echo '</table>';
 						echo "</div>";
 					}
 				}
 				echo '</div></div>';
-				// DIV tab-pane
+				// DIV pill-pane
 				echo '</div></div>';
 			}
 			echo '
 					</div>
 				</div>
 			</div>
+			';
+			include('../footer.php');
+			echo '
 		</div>';
 		?>
 		<!-- Le javascript
