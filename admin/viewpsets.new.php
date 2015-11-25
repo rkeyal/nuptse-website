@@ -59,9 +59,9 @@
 				}
 				echo '</ul>
 								<div class="pill-content">';
-				for ($j = 0; $j < count($psets); $j++) {
-					if (!empty($j) or $j == 0 and !empty($psets[$j])) {
-						$query = "select * from " . $psets[$j];
+				foreach ($psets as $pset) {
+					if (!empty($pset)) {
+						$query = "select * from " . $pset;
 						$mysqli_p = new mysqli("localhost","root","8PaHucre", "nuptse_questions");
 						$result_p = $mysqli_p->query($query);
 						$statuses = array();
@@ -88,15 +88,15 @@
 						}
 						$user_f = array_unique($user_f);
 						//error_log(implode(", ", $user_f),3, "../errors.log");
-						$l = array_search($psets[$j], $column);
-						echo "<div class='pill-pane' id='" . $groups[$i] . $psets[$j] . /** "'>"; /*/ "'>
+						$l = array_search($pset, $column);
+						echo "<div class='pill-pane' id='" . $groups[$i] . $pset . /** "'>"; /*/ "'>
 									<h1>" . $names[$l] . "</h1>
 									<h4>" . $uploaders[$l] . "</h4>
 									<h4>" . $uploadeds[$l] . " to " . $expires[$l] . "</h4>"; /**/
 		?>
-									<a href="/pdfs/<?php echo $psets[$j]; ?>.pdf">View problem set</a><br />
-									<a href="/admin/editpset.php?edit=<?php echo $psets[$j]; ?>">Edit problem set answers</a><br />
-									<a href="./exportpset.php?pset=<?php echo $psets[$j]; ?>">Export as CSV</a> (can be exported to Excel, etc.)<br /> 
+									<a href="/pdfs/<?php echo $pset; ?>.pdf">View problem set</a><br />
+									<a href="/admin/editpset.php?edit=<?php echo $pset; ?>">Edit problem set answers</a><br />
+									<a href="./exportpset.php?pset=<?php echo $pset; ?>">Export as CSV</a> (can be exported to Excel, etc.)<br /> 
 									<table class='table table-striped table-bordered'>
 									<tr>
 									<th>User</th>
