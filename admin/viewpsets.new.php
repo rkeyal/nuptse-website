@@ -60,7 +60,7 @@
 				echo '</ul>
 								<div class="pill-content">';
 				for ($j = 0; $j < count($psets); $j++) {
-					if (!empty($j) and isset($psets[$j])) {
+					if (!empty($j) or $j == 0 and !empty($psets[$j])) {
 						$query = "select * from " . $psets[$j];
 						$mysqli_p = new mysqli("localhost","root","8PaHucre", "nuptse_questions");
 						$result_p = $mysqli_p->query($query);
